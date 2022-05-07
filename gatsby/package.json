@@ -1,9 +1,9 @@
 {
-  "name": "@r-ichard/gatsby-starter-bootstrap-5",
+  "name": "Chicago CTA Panel",
   "private": false,
-  "description": "A simple starter to get up and developing quickly with Gatsby and Bootstrap 5",
+  "description": "A display panel for the Chicago CTA Buses/Trains.",
   "version": "0.1.0",
-  "author": "Richard Raduly <richard@raduly.fr>",
+  "author": "Adam Innes",
   "dependencies": {
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^5.0.1",
@@ -42,13 +42,8 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/r-ichard/gatsby-starter-bootstrap-5.git"
-  },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
-  "homepage": "https://github.com/r-ichard/gatsby-starter-bootstrap-5#readme",
   "main": "gatsby-browser.js"
 }
