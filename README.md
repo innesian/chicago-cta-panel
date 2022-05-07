@@ -1,6 +1,8 @@
-# chicago-cta-panel
+# Chicago CTA Bus/Train Display Panel
 
 Displays approaching buses and trains using the Chicago Transit Authority APIs. The bus and train APIs are slightly different and each require their own key.
+
+![](img/panel.png)
 
 -----
 
