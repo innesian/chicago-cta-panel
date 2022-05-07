@@ -1,0 +1,91 @@
+//Here you can customize bootstrap
+$primary: #663399;
+@import "~bootstrap/scss/bootstrap";
+
+
+html, body {
+    background-color: black;
+    color: white;
+}
+
+tbody, tr, td {
+    border: none;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 4px;
+}
+
+.progressBar {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid white;
+}
+
+tbody.Montrose, 
+tbody.Clark {
+
+    td {
+        background-color: transparent !important;
+
+        &.prediction {
+            font-size: 2.8em;
+            text-align: right;
+            vertical-align: middle;
+            padding-right: 10px;
+        }
+
+        &.routeLabel {
+            font-size: 2.8em;
+            vertical-align: middle;
+            padding-right: 10px;
+        }
+
+        &.fit {
+            white-space: nowrap;
+            width: 1%;
+        }
+
+        &.fit.arrow-image {
+            min-width: 100px;
+            padding-left: 20px;
+            padding-right: 20px;
+            vertical-align: middle;
+
+            img {
+                -webkit-filter: grayscale(1) invert(1);
+                filter: grayscale(1) invert(1);
+                vertical-align: middle;
+            }
+
+            &.Westbound img {
+                transform: rotate(180deg);
+            }
+
+            &.Northbound img {
+                transform: rotate(-90deg);
+                margin-left: -2px;
+            }
+
+            &.Southbound img {
+                transform: rotate(90deg);
+                margin-left: -2px;
+            }
+        }
+
+        
+
+    }
+
+    tr {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+.routeLabel {
+    font-size: 1.4em;
+    font-weight: bold;
+}
