@@ -1,0 +1,33 @@
+version: 0.1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm install 14
+        - nvm use 14
+        - cd gatsby
+        - npm i --global gatsby-cli
+        - npm --save --no-optional install
+    build:
+      commands: 
+        - gatsby build
+  artifacts:
+    baseDirectory: gatsby/public
+    files:
+      - '**/*'
+  customHeaders:
+    - pattern: '**/*'
+      headers:
+      - key: 'X-Frame-Options'
+        value: 'DENY'
+    - pattern: '**/*'
+      headers:
+      - key: 'X-Content-Type-Options'
+        value: 'nosniff'
+    - pattern: '**/*'
+      headers:
+      - key: 'Strict-Transport-Security'
+        value: 'max-age=31536000;'
+  cache:
+    paths:
+      - node_modules/**/*
