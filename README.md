@@ -7,7 +7,7 @@ Displays approaching buses and trains using the Chicago Transit Authority APIs. 
 -----
 
 ## Installation
-This project has been tested on Amazon Web Services. There is a `amplify.yml` deployment file built in for easy hosting on Amplify. In addition to the Amplify build script there are serverless Lambda functions in the `/lambda` folder, deploy these to your cloud accound and set them up with configuration settings below.
+This project has been tested on Amazon Web Services. There is an `amplify.yml` deployment file built in for easy hosting on Amplify. In addition to the Amplify build script there are serverless Lambda functions in the `/lambda` folder, deploy these to your cloud accound and set them up with configuration settings below.
 
 -----
 
@@ -17,8 +17,6 @@ This project has been tested on Amazon Web Services. There is a `amplify.yml` de
 ## Lambda Endpoint: fetch-buses-python
 ### Expected Environment Variables / Inputs
 
------
-
 | Type | Name | Description |
 | ------------- | ------------- | ----------- |
 | Environment | CTA_BUS_KEY | API key from the CTA. |
@@ -27,4 +25,15 @@ This project has been tested on Amazon Web Services. There is a `amplify.yml` de
 
 -----
 
+## Gatsby Configuration
+Gatsby expects some configuration settings in the `.env.development` and `.env.production` files. There is an example template file for the configuration named `example.env.production` in the `gatsby` folder.
+
+### Expected Environment Variables
+
+| Type | Name | Description |
+| ------------- | ------------- | ----------- |
+| Environment | GATSBY_LAMBDA_EP_BUSES | AWS Lambda endpoint to send the request for updated bus info. |
+| Environment | GATSBY_LAMBDA_EP_TRAINS | AWS Lambda endpoint to send the request for updated train info. |
+| Environment | GATSBY_REQUEST_REFRESH_DELAY | Delay in MS for refreshing data from the APIs, defaults to 15 seconds. |
+| Environment | GATSBY_BUS_STOPS | JSON object containing a list of bus stops to query. Reference the example file for structure. |
 
