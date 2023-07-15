@@ -1,0 +1,16 @@
+{
+  "version": "2.0.3",
+  "summary": {
+    "title": "CTA Bus Panel",
+    "owner": "Adam Innes",
+    "description": "Displays busses in Chicago nearby.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
